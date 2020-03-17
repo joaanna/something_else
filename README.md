@@ -30,6 +30,17 @@ An example of per-frame annotation is shown below, the names and number of "some
 ```
 The annotations for example videos are a small subset of the annotation file, and can be found in `annotations.json`.
 
+# Citation
+If you use our annotations in your research or wish to refer to the baseline results, please use the following BibTeX entry.
+```
+@inproceedings{CVPR2020_SomethingElse,
+  title={Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks},
+  author={Materzynska, Joanna and Xiao, Tete and Herzig, Roei and Xu, Huijuan and Wang, Xiaolong and Darrell, Trevor},
+  booktitle = {CVPR},
+  year={2020}
+}
+```
+
 # Visualization of the ground-truth bounding boxes
 The folder `videos` contains example videos from the dataset and selected annotations file (full file availible on google drive). To visualize videos with annotated bounding boxes run:
 
