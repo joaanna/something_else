@@ -1,5 +1,5 @@
 # The Something-Else Annotations
-This repository provides intructions regarding the annotations used in the paper: 'Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks'.
+This repository provides intructions regarding the annotations used in the paper: 'Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks' (https://arxiv.org/abs/1912.09930).
 We collected annotations for 180049 videos from the Something-Something Dataset (https://20bn.com/datasets/something-something), that include per frame bounding box annotation for each object and hand in the human-object interaction in the video.
 
 The file containing annotations can be downloaded from:
