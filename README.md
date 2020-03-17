@@ -36,3 +36,16 @@ The folder `videos` contains example videos from the dataset and selected annota
 ```python annotate_videos.py```
 
 The annotated videos will be saved in the `annotated_videos` folder.
+
+# Visualization of the detected bounding boxes trained
+
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/10015.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/130153.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/154439.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/174270.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/17628.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/21037.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/24719.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/31061.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/31156.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/35176.gif)
