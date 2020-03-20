@@ -1,5 +1,5 @@
 # The Something-Else Annotations
-This repository provides intructions regarding the annotations used in the paper: 'Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks'.
+This repository provides intructions regarding the annotations used in the paper: 'Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks' (https://arxiv.org/abs/1912.09930).
 We collected annotations for 180049 videos from the Something-Something Dataset (https://20bn.com/datasets/something-something), that include per frame bounding box annotation for each object and hand in the human-object interaction in the video.
 
 The file containing annotations can be downloaded from:
@@ -30,9 +30,33 @@ An example of per-frame annotation is shown below, the names and number of "some
 ```
 The annotations for example videos are a small subset of the annotation file, and can be found in `annotations.json`.
 
+# Citation
+If you use our annotations in your research or wish to refer to the baseline results, please use the following BibTeX entry.
+```
+@inproceedings{CVPR2020_SomethingElse,
+  title={Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks},
+  author={Materzynska, Joanna and Xiao, Tete and Herzig, Roei and Xu, Huijuan and Wang, Xiaolong and Darrell, Trevor},
+  booktitle = {CVPR},
+  year={2020}
+}
+```
+
 # Visualization of the ground-truth bounding boxes
 The folder `videos` contains example videos from the dataset and selected annotations file (full file availible on google drive). To visualize videos with annotated bounding boxes run:
 
 ```python annotate_videos.py```
 
 The annotated videos will be saved in the `annotated_videos` folder.
+
+# Visualization of the detected bounding boxes 
+
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/10015.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/130153.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/154439.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/174270.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/17628.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/21037.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/24719.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/31061.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/31156.gif)
+![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/35176.gif)
