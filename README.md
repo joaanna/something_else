@@ -41,6 +41,9 @@ If you use our annotations in your research or wish to refer to the baseline res
 }
 ```
 
+# Dataset splits
+The compositional, compositional shuffle, one-class compositional and few-shot splits of the Something Something v2 Dataset are availible in the folder `dataset_splits`. 
+
 # Visualization of the ground-truth bounding boxes
 The folder `videos` contains example videos from the dataset and selected annotations file (full file availible on google drive). To visualize videos with annotated bounding boxes run:
 
