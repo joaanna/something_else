@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- ======================================================================= -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+
+
+<html>
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67835289-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-67835289-2');
+  </script>
+
+  <title>SomethingElse</title>
+  <meta property="og:title" content="Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks" />
+<!--   <meta property="og:image" content="https:" />
+ -->  <meta property="og:image:width" content="3000" />
+  <meta property="og:image:height" content="800" />
+  </head>
+
+  <body>
+    <br>
+          <center>
+            <span style="font-size:36px">Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks</span>
+        <br><br>
+        <span style="font-size:24px">CVPR 2020</span>
+        <br><br>
+      <table align=center width=700px>
+            <tr>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px">Joanna Materzynska</span>
+                </center>
+                </td>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="http://tetexiao.com/">Tete Xiao</a></span>
+                </center>
+                </td>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="https://roeiherz.github.io/">Roei Herzig</a></span>
+                </center>
+                </td>
+                    <!-- <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="https://cs-people.bu.edu/hxu/">Huijuan Xu*</a></span>
+                </center>
+                </td>
+                <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="http://www.cs.cmu.edu/~xiaolonw/">Xiaolong Wang*</a></span>
+                </center>
+                </td>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell*</a></span>
+                </center>
+                </td> -->
+        </table>
+        <br>
+              <table align=center width=1000px>
+            <!-- <tr>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px">Joanna Materzynska</span>
+                </center>
+                </td>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="http://tetexiao.com/">Tete Xiao</a></span>
+                </center>
+                </td>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="https://roeiherz.github.io/">Roei Herzig</a></span>
+                </center>
+                </td> -->
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="https://cs-people.bu.edu/hxu/">Huijuan Xu*</a></span>
+                </center>
+                </td>
+                <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="http://www.cs.cmu.edu/~xiaolonw/">Xiaolong Wang*</a></span>
+                </center>
+                </td>
+                    <td align=center width=100px>
+              <center>
+                <span style="font-size:24px"><a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell*</a></span>
+                </center>
+                </td>
+        </table>
+        <br>
+              <!-- <span style="font-size:30px">ECCV 2016.</span> -->
+
+          <table align=center width=600px>
+            <tr>
+                <td align=center width=150px>
+              <center>
+                <span style="font-size:24px"><a href='https://github.com/joaanna/something_else'> [GitHub]</a></span>
+                </center>
+                </td>
+          <!--       <td align=center width=150px>
+              <center>
+                <span style="font-size:24px"><a href='https://www.dropbox.com/s/3o2w4e57vs1vcl8/cvpr19_oral_v11.pptx?dl=0'> [Slides]</a></span>
+                </center>
+                </td> -->
+                <td align=center width=150px>
+              <center>
+                <span style="font-size:24px"><a href="https://arxiv.org/abs/1912.09930"> [Paper]</a></span>
+                </center>
+                </td>
+ <!--                <td align=center width=150px>
+              <center>
+                <span style="font-size:24px"><a href="https://www.dropbox.com/s/9nyzd6hhab2uh8p/cvpr.timecycle.poster_v3.pptx?dl=0"> [Poster]</a></span>
+                </center>
+                </td> -->
+               </tr>
+            <tr>
+        </table>
+          </center>
+
+<!--        <br><br>
+      <hr> -->
+
+        <br>
+    <!--     <table align=center width=850px>
+          <tr>
+            <td width=400px>
+              <center>
+                        <a href="./figures/horsepano.jpg"><img src = "./figures/horsepano.jpg" width="100%"></img></href></a><br>
+              </center>
+            </td>
+          </tr>
+
+
+        </table> -->
+
+          <br><br>
+
+      <hr>
+
+        <table align=center width=850px>
+          <center><h1>Abstract</h1></center>
+      </table>
+          Human action is naturally compositional: humans can easily recognize and perform actions with objects that are different from those used in training demonstrations. In this paper, we study the compositionality of action by looking into the dynamics of subject-object interactions. We propose a novel model which can explicitly reason about the geometric relations between constituent objects and an agent performing an action. To train our model, we collect dense object box annotations on the Something-Something dataset. We propose a novel compositional action recognition task where the training combinations of verbs and nouns do not overlap with the test set. The novel aspects of our model are applicable to activities with prominent object interaction dynamics and to objects which can be tracked using state-of-the-art approaches; for activities without clearly defined spatial object-agent interactions, we rely on baseline scene-level spatio-temporal representations. We show the effectiveness of our approach not only on the proposed compositional action recognition task, but also in a few-shot compositional setting which requires the model to generalize across both object appearance and action category.
+
+        <br><br>
+      </table>
+
+      <br>
+      <br>
+      <hr>
+
+        <table align=center width=850px>
+          <center><h1>Framework</h1></center>
+      </table>
+          We present Spatial-Temporal Interaction Networks (STIN) for compositional action recognition. Our model utilizes a generic detector and tracker to build objectgraph representations that explicitly include hand and constituent object nodes. We perform spatial-temporal reasoning among these bounding boxes to understand how the relations between subjects and objects change over time for a given action. By explicitly modeling the transformation of object geometric relations in a video, our model can effectively generalize to videos with unseen combinations of verbs and nouns.
+
+        <br><br>
+      </table>
+      <center>
+        <img src="figures/model.png" width=789 align="middle">
+      </center>
+          <br>
+      <hr>
+      <br>
+              <table align=center width=850px>
+          <center><h1>Results</h1></center>
+      </table>
+<table>
+<!--     <tr>
+        <td>Results on the original Something-something V2
+dataset. Ground-truth annotations are applied with STIN.</td>
+        <td><img src="figures/org.png" width="400px"style="float: right;" /></td>
+    </tr>
+</table>
+<br><br> -->
+<table>
+    <tr>
+       <center>
+       <img src="figures/compositional.png" width="400px" /></center>
+       <p>Compositional action recognition over 174 classes. We present results when training the models using the detected bounding boxes.</p>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+       <center>
+        <img src="figures/fewshot.png" width="400px"/></center>
+        <p>Few-shot compositional action recognition on base categories and few-shot novel categories. We show results with object detection boxes.</p>
+    </tr>
+</table>
+<!-- <br><br>
+<table>
+    <tr>
+        <td>One-class compositional action recognition. The model
+is trained on videos with only one object class: “box”.</td>
+        <td><img src="figures/oneobj.png" width="400px"style="float: right;" /></td>
+    </tr>
+</table>
+ -->
+<hr>
+        <!-- <table align=center width=550px> -->
+        <table align=center width=425px>
+      <center><h1>Visualization of the detected bounding boxes</h1></center>
+          <tr>
+
+            <a href="./videos/tracking_annotations/10015.gif"><img src = "./videos/tracking_annotations/10015.gif" width="30%"></img></href></a> &nbsp &nbsp
+            <a href="./videos/tracking_annotations/130153.gif"><img src = "./videos/tracking_annotations/130153.gif" width="30%"></img></href></a> &nbsp &nbsp
+            <a href="./videos/tracking_annotations/154439.gif"><img src = "./videos/tracking_annotations/154439.gif" width="30%"></img></href></a>
+
+            <br>
+            <br>
+
+            <a href="./videos/tracking_annotations/21037.gif"><img src = "./videos/tracking_annotations/21037.gif" width="30%"></img></href></a> &nbsp &nbsp
+            <a href="./videos/tracking_annotations/24719.gif"><img src = "./videos/tracking_annotations/24719.gif" width="30%"></img></href></a> &nbsp &nbsp
+            <a href="./videos/tracking_annotations/31156.gif"><img src = "./videos/tracking_annotations/31156.gif" width="30%"></img></href></a>
+
+            <br>
+            <br>
+
+            <a href="./videos/tracking_annotations/174270.gif"><img src = "./videos/tracking_annotations/174270.gif" width="30%"></img></href></a> &nbsp &nbsp
+            <a href="./videos/tracking_annotations/17628.gif"><img src = "./videos/tracking_annotations/17628.gif" width="30%"></img></href></a> &nbsp &nbsp
+            <a href="./videos/tracking_annotations/31061.gif"><img src = "./videos/tracking_annotations/31061.gif" width="30%"></img></href></a>
+
+
+              </tr>
+        </table>
+      <br>
+
+      <br>
+      <hr>
+
+<!--       <center>
+      <h1>Video for More Results</h1>
+      <table border="0" align="center" cellspacing="0" cellpadding="20">
+          <td align="center" valign="middle">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/yLUCTX7bZVI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </td>
+      </table>
+      </center> -->
+
+
+      <!-- <hr> -->
+
+        <!-- <table align=center width=550px> -->
+        <table align=center width=800px>
+      <center><h1>Paper</h1></center>
+          <tr>
+          <td><a href="https://arxiv.org/pdf/1903.07593.pdf"><img class="layered-paper-big" style="height:175px" src="./figures/paper.png"/></a></td>
+          <td><a href="https://arxiv.org/pdf/1903.07593.pdf"></a></td>
+          <td><span style="font-size:14pt">Joanna Materzynska, Tete Xiao, Roei Herzig, Huijuan Xu*, Xiaolong Wang*, Trevor Darrell*<br>
+          <i>Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks</i><br>
+          In CVPR, 2020.<br>
+          (hosted on <a href="https://arxiv.org/abs/1912.09930">arXiv</a>)</a>
+          <span style="font-size:4pt"><a href="https://arxiv.org/pdf/1903.07593.pdf"><br></a>
+          </span>
+          </td>
+                  </td>
+              </tr>
+        </table>
+      <br>
+
+      <table align=center width=600px>
+        <tr>
+          <td><span style="font-size:14pt"><center>
+            <a href="./figures/bibtex_smthelse.txt">[Bibtex]</a>
+                  </center></td>
+              </tr>
+        </table>
+
+        <hr>
+
+        <table align=center width=1100px>
+          <tr>
+                  <td width=400px>
+            <left>
+          <center><h1>Acknowledgements</h1></center>
+        </table>
+We thank members of the BAIR community for helpful discussions and feedback, and Jonathon Luiten for comments on drafts. JM is supported by the Twenty Billion Neurons GmbH Fellowship. XW is supported by the Facebook PhD Fellowship.
+        </table>
+
+      </left>
+    </td>
+       </tr>
+    </table>
+
+    <br><br>
+
+
+</body>
+</html>

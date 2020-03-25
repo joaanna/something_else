@@ -1,0 +1,6 @@
+@inproceedings{CVPR2020_SomethingElse,
+  title={Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks},
+  author={Materzynska, Joanna and Xiao, Tete and Herzig, Roei and Xu, Huijuan and Wang, Xiaolong and Darrell, Trevor},
+  booktitle = {CVPR},
+  year={2020}
+}
