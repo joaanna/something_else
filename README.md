@@ -3,7 +3,7 @@ This repository provides intructions regarding the annotations used in the paper
 We collected annotations for 180049 videos from the Something-Something Dataset (https://20bn.com/datasets/something-something), that include per frame bounding box annotation for each object and hand in the human-object interaction in the video.
 
 The file containing annotations can be downloaded from:
-https://drive.google.com/open?id=1XqZC2jIHqrLPugPOVJxCH_YWa275PBrZ,
+https://drive.google.com/open?id=1XqZC2jIHqrLPugPOVJxCH_YWa275PBrZ in four parts,
 it containes a dictionary mapping each video id, the name of the video file to the list of per-frame annotations. The annotations assume that the frame rate of the videos is 12.
 An example of per-frame annotation is shown below, the names and number of "something's" in the frame correspond to the fields
 'gt_placeholders' and 'nr_instances', the frame path is given in the field 'name', 'labels' is a list of object's and hand's bounding boxes and names.
