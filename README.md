@@ -1,10 +1,10 @@
 # The Something-Else Annotations
-This repository provides intructions regarding the annotations used in the paper: 'Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks' (https://arxiv.org/abs/1912.09930).
+This repository provides instructions regarding the annotations used in the paper: 'Something-Else: Compositional Action Recognition with Spatial-Temporal Interaction Networks' (https://arxiv.org/abs/1912.09930).
 We collected annotations for 180049 videos from the Something-Something Dataset (https://20bn.com/datasets/something-something), that include per frame bounding box annotation for each object and hand in the human-object interaction in the video.
 
 The file containing annotations can be downloaded from:
 https://drive.google.com/open?id=1XqZC2jIHqrLPugPOVJxCH_YWa275PBrZ,
-it containes a dictionary mapping each video id, the name of the video file to the list of per-frame annotations. The annotations assume that the frame rate of the videos is 12.
+it contains a dictionary mapping each video id, the name of the video file to the list of per-frame annotations. The annotations assume that the frame rate of the videos is 12.
 An example of per-frame annotation is shown below, the names and number of "something's" in the frame correspond to the fields
 'gt_placeholders' and 'nr_instances', the frame path is given in the field 'name', 'labels' is a list of object's and hand's bounding boxes and names.
 
@@ -39,13 +39,23 @@ If you use our annotations in your research or wish to refer to the baseline res
   booktitle = {CVPR},
   year={2020}
 }
+
+@inproceedings{goyal2017something,
+  title={The" Something Something" Video Database for Learning and Evaluating Visual Common Sense.},
+  author={Goyal, Raghav and Kahou, Samira Ebrahimi and Michalski, Vincent and Materzynska, Joanna and Westphal, Susanne and Kim, Heuna and Haenel, Valentin and Fruend, Ingo and Yianilos, Peter and Mueller-Freitag, Moritz and others},
+  booktitle={ICCV},
+  volume={1},
+  number={4},
+  pages={5},
+  year={2017}
+}
 ```
 
 # Dataset splits
-The compositional, compositional shuffle, one-class compositional and few-shot splits of the Something Something v2 Dataset are availible in the folder `dataset_splits`. 
+The compositional, compositional shuffle, one-class compositional and few-shot splits of the Something Something v2 Dataset are available in the folder `dataset_splits`. 
 
 # Visualization of the ground-truth bounding boxes
-The folder `videos` contains example videos from the dataset and selected annotations file (full file availible on google drive). To visualize videos with annotated bounding boxes run:
+The folder `videos` contains example videos from the dataset and selected annotations file (full file available on google drive). To visualize videos with annotated bounding boxes run:
 
 ```python annotate_videos.py```
 
@@ -63,3 +73,25 @@ The annotated videos will be saved in the `annotated_videos` folder.
 ![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/31061.gif)
 ![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/31156.gif)
 ![Output sample](https://github.com/joaanna/something_else/blob/master/videos/tracking_annotations/35176.gif)
+
+# Training
+To train the models from our paper run:
+```python train.py --model coord_latent_nl --num_frames 16 --logname experiment_name --batch_size 12 
+                   --coord_feature_dim 256 --root_frames /path/to/frames 
+                   --json_data_train dataset_splits/compositional/train.json 
+                   --json_data_val dataset_splits/compositional/validation.json 
+                   --json_file_labels dataset_splits/compositional/labels.json
+                   --tracked_boxes /path/to/bounding_box_annotations.json
+```
+
+Place the data in the folder /path/to/frames each video bursted into frames in a separate folder. The ground-truth box annotations 
+can be found in the google drive in parts and have to be concatenated in a single json file.
+
+The models that are using appearance features are initialized with I3D network pre-trained on Kinetics, the checkpoint can be found in the google drive and should be placed in 'model/pretrained_weights/kinetics-res50.pth'.
+
+We also provide some checkpoints to the trained models. To evaluate a model use the same script as for training with a flag `--args.evaluate` and path to the checkpoint `--args.resume /path/to/checkpoint`'
+
+# Acknowledgments
+We used parts of code from following repositories:
+https://github.com/facebookresearch/SlowFast
+https://github.com/TwentyBN/something-something-v2-baseline
