@@ -3,8 +3,9 @@ This repository provides instructions regarding the annotations used in the pape
 We collected annotations for 180049 videos from the Something-Something Dataset (https://20bn.com/datasets/something-something), that include per frame bounding box annotation for each object and hand in the human-object interaction in the video.
 
 The file containing annotations can be downloaded from:
-https://drive.google.com/open?id=1XqZC2jIHqrLPugPOVJxCH_YWa275PBrZ,
-it contains a dictionary mapping each video id, the name of the video file to the list of per-frame annotations. The annotations assume that the frame rate of the videos is 12.
+
+https://drive.google.com/open?id=1XqZC2jIHqrLPugPOVJxCH_YWa275PBrZ in four parts,
+it containes a dictionary mapping each video id, the name of the video file to the list of per-frame annotations. The annotations assume that the frame rate of the videos is 12.
 An example of per-frame annotation is shown below, the names and number of "something's" in the frame correspond to the fields
 'gt_placeholders' and 'nr_instances', the frame path is given in the field 'name', 'labels' is a list of object's and hand's bounding boxes and names.
 
@@ -15,12 +16,14 @@ An example of per-frame annotation is shown below, the names and number of "some
                           'x2': 427,
                           'y1': 11.889318166856967,
                           'y2': 239.92858832368972},
-                          'category': 'pillow'},
+                          'category': 'pillow',
+                          'standard_category': '0000'}},
                 {'box2d': {'x1': 210.1160330781122,
                           'x2': 345.4329005999551,
                           'y1': 78.65516045335991,
                           'y2': 209.68758889799403},
-                          'category': 'hand}],
+                          'category': 'hand',
+                          'standard_category': 'hand'}}],
      'name': '2/0001.jpg',
      'nr_instances': 2}, 
      {...},
