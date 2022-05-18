@@ -33,6 +33,9 @@ An example of per-frame annotation is shown below, the names and number of "some
 ```
 The annotations for example videos are a small subset of the annotation file, and can be found in `annotations.json`.
 
+# Project website: 
+https://joaanna.github.io/something_else/
+
 # Citation
 If you use our annotations in your research or wish to refer to the baseline results, please use the following BibTeX entry.
 ```
@@ -53,6 +56,7 @@ If you use our annotations in your research or wish to refer to the baseline res
   year={2017}
 }
 ```
+
 
 # Dataset splits
 The compositional, compositional shuffle, one-class compositional and few-shot splits of the Something Something v2 Dataset are available in the folder `dataset_splits`. 
